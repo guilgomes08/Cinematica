@@ -80,14 +80,9 @@ double desloc_semt_mruv(double v, double v0, double a){
 int main() {
     
     //Obj(double s0, double v0, double t0, double a, double v, double s)
-    Obj object1(1, 10, 0, 5, 20);
-    Obj object2(10, 20);
-    std::cout << tempomp_mru(object1.getS0(), object2.getS0(), object1.getV0(), object2.getV0()) << " s";
+    Obj object1(0, 10, 0, 5, 20, 0);
     std::cout << "\n";
-    std::cout << espacomp_mru(object1.getS0(), object2.getS0(), object1.getV0(), object2.getV0()) << " m";
-
-    std::cout << "\n";
-    std::cout << "Agora tratando de MRUV\n";
+    std::cout << "Tratando de MRUV\n";
     std::cout << desloc_semt_mruv(object1.getV(), object1.getV0(), object1.getA());
 
     return 0;
