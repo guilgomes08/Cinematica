@@ -48,16 +48,7 @@ double timesp_mru(double s01, double s02, double v1, double v2){
 
 double spacesp_mru(double s01, double s02, double v1, double v2){
 
-    double t = 0;
-
-    if(v1 < 0){
-        t = (s01 - s02)/(v1*-1 + v2);
-        return t*v2 + s02;
-    }
-    if(v2 < 0){
-        t = (s02 - s01)/(v1 + v2*-1);
-        return t*v1 + s01;
-    }
+    return timesp_mru(s01, s02, v1, v2)*v1 + s01;
 };
 
 int main() {
